@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:    context-path: /
+    encoding:      charset: UTF-8
+      enabled: true
+      
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1:3306/todolistdb?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false
+    username: thekim12
+    password: bitflow
+    
+  jpa:
+    hibernate:      ddl-auto: create
+      naming:        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true    open-in-view: true  
+  mvc:    view:      prefix: /WEB-INF/views/
+      suffix: .jsp
+    
+  h2:    console:      enabled: true
+       
+    
+    
